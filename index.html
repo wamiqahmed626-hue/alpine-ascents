@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine Ascents - Mountaineering Guide</title>
+    <link rel="icon" href="assets/img/logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <span>Live Date &amp; Time: <span id="liveDateTime"></span></span>
+        </div>
+        <div>
+            <span>Visitors: <span id="visitorCount" class="badge bg-light text-dark">1248</span></span>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.jpg" alt="Logo" width="40" height="40">
+            <span>Alpine Ascents</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Climbing Guides
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="types.html">Types &amp; Styles</a></li>
+                        <li><a class="dropdown-item" href="techniques.html">Techniques</a></li>
+                        <li><a class="dropdown-item" href="camping.html">Camping &amp; Sheltering</a></li>
+                        <li><a class="dropdown-item" href="safety.html">Hazards &amp; Safety</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Community &amp; Media
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="history.html">History</a></li>
+                        <li><a class="dropdown-item" href="stories.html">Success Stories</a></li>
+                        <li><a class="dropdown-item" href="clubs.html">Clubs &amp; Locations</a></li>
+                        <li><a class="dropdown-item" href="gallery.html">Photo Gallery</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Guidelines &amp; Updates
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="developments.html">Developments</a></li>
+                        <li><a class="dropdown-item" href="guidelines.html">Guidelines</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-section">
+    <img src="assets/img/hero-mountain.jpg" alt="Mountain Peak" class="hero-bg-img">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <span class="section-subtitle">Field &amp; Expedition Guide</span>
+        <h1 class="display-4 fw-bold mt-2 mb-3">The Craft of Going Higher</h1>
+        <p class="lead max-w-600 mx-auto mb-4 text-light">An educational guide to mountaineering — techniques, history, hazards, and ethics of climbing high places.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#explore" class="btn btn-warning text-dark fw-bold px-4 py-2">Explore Topics</a>
+            <a href="safety.html" class="btn btn-outline-light fw-bold px-4 py-2">Safety First</a>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <img src="assets/img/climbing.jpg" alt="Climber on rock face" class="img-fluid rounded">
+            </div>
+            <div class="col-lg-6">
+                <span class="section-subtitle">Why This Guide</span>
+                <h2 class="section-title">Mountains reward patience more than ambition.</h2>
+                <p class="text-secondary mt-3">Good mountaineering is less about conquering summits and more about judgement: reading the weather, knowing your team, and turning around when conditions say so.</p>
+                <p class="text-secondary">This guide gathers the core ideas a new climber meets — from basic rope work to the history that shaped modern practice — in plain, careful language.</p>
+                <a href="about.html" class="btn-custom-primary mt-2">About The Guide</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding bg-light-section" id="explore">
+    <div class="container">
+        <div class="row align-items-end mb-4">
+            <div class="col-md-7">
+                <span class="section-subtitle">Topics</span>
+                <h2 class="section-title mb-0">Explore The Guide</h2>
+            </div>
+            <div class="col-md-5">
+                <input type="text" id="topicSearch" class="form-control" placeholder="Search topics (e.g. avalanche, rope)...">
+            </div>
+        </div>
+
+        <div class="row g-4" id="topicCardsContainer">
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/climbing.jpg" alt="Types and Styles">
+                    <div class="card-body">
+                        <h5>Types &amp; Styles</h5>
+                        <p class="text-secondary small">Alpine style, expedition style, ski mountaineering and trekking peaks — how approach shapes risk and reward.</p>
+                        <a href="types.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/ice-climbing.jpg" alt="Technical Techniques">
+                    <div class="card-body">
+                        <h5>Technical Techniques</h5>
+                        <p class="text-secondary small">Rope work, crampon and ice-axe skills, self-arrest and crevasse rescue fundamentals.</p>
+                        <a href="techniques.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/safety.jpg" alt="Hazards and Safety">
+                    <div class="card-body">
+                        <h5>Hazards &amp; Safety</h5>
+                        <p class="text-secondary small">Objective and subjective hazards: avalanches, rockfall, weather, hypothermia, and altitude illness.</p>
+                        <a href="safety.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/high-camp.jpg" alt="Shelter and High Camp">
+                    <div class="card-body">
+                        <h5>Shelter &amp; High Camp</h5>
+                        <p class="text-secondary small">Choosing tent sites, building snow shelters, mountain huts, and living well above the treeline.</p>
+                        <a href="camping.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/peak-matterhorn.jpg" alt="Historical Expeditions">
+                    <div class="card-body">
+                        <h5>Historical Expeditions</h5>
+                        <p class="text-secondary small">From Mont Blanc in 1786 to the first ascent of Everest in 1953 and K2 winter in 2021.</p>
+                        <a href="history.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/ridge-walk.jpg" alt="Success Stories">
+                    <div class="card-body">
+                        <h5>Success Stories</h5>
+                        <p class="text-secondary small">Landmark climbs and the teamwork, patience, and judgement behind legendary mountain achievements.</p>
+                        <a href="stories.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/glacier.jpg" alt="Photo Gallery">
+                    <div class="card-body">
+                        <h5>Photo Gallery</h5>
+                        <p class="text-secondary small">Glaciers, ridgelines, high camps, and inspiring alpine vistas from around the globe.</p>
+                        <a href="gallery.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/clubs.jpg" alt="Alpine Clubs">
+                    <div class="card-body">
+                        <h5>Alpine Clubs &amp; Locations</h5>
+                        <p class="text-secondary small">Historic and national climbing organisations that train mountaineers and maintain huts worldwide.</p>
+                        <a href="clubs.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/gear-prep.jpg" alt="Gear Preparation">
+                    <div class="card-body">
+                        <h5>Gear &amp; Guidelines</h5>
+                        <p class="text-secondary small">Essential equipment checklist, layering systems, and personal preparation before setting out.</p>
+                        <a href="guidelines.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/glacier.jpg" alt="Glacier Travel">
+                    <div class="card-body">
+                        <h5>Glacier Travel</h5>
+                        <p class="text-secondary small">Roped teams, spacing and probing — moving safely across crevassed terrain in alpine regions.</p>
+                        <a href="techniques.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/hero-mountain.jpg" alt="Latest Developments">
+                    <div class="card-body">
+                        <h5>Latest Developments</h5>
+                        <p class="text-secondary small">Lighter gear, better forecasting, climate impact on glaciers, and evolving regulations.</p>
+                        <a href="developments.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 topic-card-col">
+                <div class="card-custom">
+                    <img src="assets/img/camping.jpg" alt="Leave No Trace">
+                    <div class="card-body">
+                        <h5>Leave No Trace</h5>
+                        <p class="text-secondary small">Carrying out waste, respecting local communities, and preserving fragile mountain ecosystems.</p>
+                        <a href="guidelines.html" class="btn-custom-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="section-subtitle">Milestones</span>
+                <h2 class="section-title">Two and a half centuries on the high peaks</h2>
+                <div class="timeline-item mt-4">
+                    <div class="timeline-year">1786</div>
+                    <p class="mb-0 text-secondary">Jacques Balmat and Michel-Gabriel Paccard reach the summit of Mont Blanc.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1953</div>
+                    <p class="mb-0 text-secondary">Tenzing Norgay and Edmund Hillary make the first confirmed ascent of Mount Everest.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <p class="mb-0 text-secondary">A team of ten Nepali climbers completes the first historic winter ascent of K2.</p>
+                </div>
+                <a href="history.html" class="btn-custom-primary mt-2">Read Full History</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="assets/img/peak-matterhorn.jpg" alt="The Matterhorn" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding bg-dark-section">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <span class="section-subtitle text-warning">Safety Maxim</span>
+                <h2 class="section-title text-white my-3">"The summit is optional. Getting down is mandatory."</h2>
+                <p class="text-light mb-4">A widely repeated mountaineering maxim by Ed Viesturs. Before any climb, study safety procedures, understand mountain weather, and learn from certified professionals.</p>
+                <a href="guidelines.html" class="btn btn-warning text-dark fw-bold px-4 py-2">Read Safety Guidelines</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding bg-light-section">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-md-7">
+                <img src="assets/img/high-camp.jpg" alt="Tents pitched at high camp" class="img-fluid rounded">
+            </div>
+            <div class="col-md-5">
+                <span class="section-subtitle">Visual Experience</span>
+                <h3 class="section-title">From Base Camp to High Ridges</h3>
+                <p class="text-secondary">Browse real photographs from glaciers, ridgelines, and alpine camps across the mountain ranges of the world.</p>
+                <a href="gallery.html" class="btn-custom-primary mt-2">Open Photo Gallery</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-custom">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <h5>Alpine Ascents</h5>
+                <p class="small">An educational field guide to mountaineering covering climbing styles, ropework, glacier travel, safety, alpine history, and mountain ethics.</p>
+                <p class="small text-muted">A student eProject presentation.</p>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5>Climbing Guides</h5>
+                <ul>
+                    <li><a href="types.html">Types &amp; Styles</a></li>
+                    <li><a href="techniques.html">Technical Techniques</a></li>
+                    <li><a href="camping.html">Camping &amp; Sheltering</a></li>
+                    <li><a href="safety.html">Hazards &amp; Safety</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5>Community &amp; Updates</h5>
+                <ul>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="stories.html">Success Stories</a></li>
+                    <li><a href="clubs.html">Clubs &amp; Locations</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="developments.html">Developments</a></li>
+                    <li><a href="guidelines.html">Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+            <div>&copy; 2026 Alpine Ascents - Aptech Student eProject.</div>
+            <div>Built with HTML5, CSS3, JavaScript and Bootstrap 5.</div>
+        </div>
+    </div>
+</footer>
+
+<div class="tracker-bar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <div>
+            <strong>Live Tracker:</strong>
+            <span id="trackerDateTime">Loading date and time...</span>
+        </div>
+        <div>
+            <strong>Location:</strong>
+            <span id="trackerLocation">Detecting location...</span>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212529;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: #1b4332;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2d6a4f;
+    text-decoration: underline;
+}
+
+.top-bar {
+    background-color: #0f281e;
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 7px 0;
+}
+
+.navbar-custom {
+    background-color: #1b4332;
+    padding: 10px 0;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-custom .navbar-brand img {
+    border-radius: 4px;
+}
+
+.navbar-custom .nav-link {
+    color: #ffffff;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: #ffd166;
+}
+
+.navbar-custom .dropdown-menu {
+    border-radius: 4px;
+    border: 1px solid #d3ded7;
+    background-color: #ffffff;
+}
+
+.navbar-custom .dropdown-item {
+    color: #212529;
+    padding: 7px 16px;
+    font-size: 0.9rem;
+}
+
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item.active {
+    background-color: #1b4332;
+    color: #ffffff;
+}
+
+.hero-section {
+    position: relative;
+    background-color: #0f281e;
+    color: #ffffff;
+    padding: 85px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 40, 30, 0.78);
+    z-index: 1;
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header {
+    background-color: #1b4332;
+    color: #ffffff;
+    padding: 42px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.page-header p {
+    font-size: 1rem;
+    color: #d8f3dc;
+    margin-bottom: 0;
+}
+
+.section-padding {
+    padding: 50px 0;
+}
+
+.bg-light-section {
+    background-color: #f3f6f4;
+}
+
+.bg-dark-section {
+    background-color: #1b4332;
+    color: #ffffff;
+}
+
+.section-title {
+    color: #1b4332;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.bg-dark-section .section-title {
+    color: #ffffff;
+}
+
+.section-subtitle {
+    color: #c97a2b;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.card-custom {
+    background-color: #ffffff;
+    border: 1px solid #d3ded7;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.card-custom:hover {
+    border-color: #1b4332;
+}
+
+.card-custom img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-custom .card-body {
+    padding: 18px;
+}
+
+.btn-custom-primary {
+    background-color: #1b4332;
+    color: #ffffff;
+    border: 1px solid #1b4332;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.btn-custom-primary:hover {
+    background-color: #2d6a4f;
+    border-color: #2d6a4f;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-custom-outline {
+    background-color: transparent;
+    color: #1b4332;
+    border: 1px solid #1b4332;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.btn-custom-outline:hover {
+    background-color: #1b4332;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.info-box {
+    background-color: #ffffff;
+    border: 1px solid #d3ded7;
+    border-left: 4px solid #1b4332;
+    padding: 20px;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.timeline-item {
+    border-left: 3px solid #1b4332;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: #c97a2b;
+    font-size: 1.05rem;
+}
+
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.table-custom th {
+    background-color: #1b4332;
+    color: #ffffff;
+    padding: 12px;
+    border: 1px solid #d3ded7;
+    font-size: 0.95rem;
+}
+
+.table-custom td {
+    padding: 12px;
+    border: 1px solid #d3ded7;
+    font-size: 0.9rem;
+}
+
+.table-custom tr:nth-child(even) {
+    background-color: #f8faf9;
+}
+
+.gallery-card {
+    border: 1px solid #d3ded7;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-card:hover img {
+    opacity: 0.88;
+}
+
+.gallery-card .caption {
+    padding: 9px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1b4332;
+    background-color: #f3f6f4;
+}
+
+.footer-custom {
+    background-color: #0f281e;
+    color: #d8f3dc;
+    padding: 45px 0 20px;
+}
+
+.footer-custom h5 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.footer-custom ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-custom ul li {
+    margin-bottom: 8px;
+}
+
+.footer-custom ul li a {
+    color: #b7e4c7;
+    font-size: 0.9rem;
+}
+
+.footer-custom ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1f4736;
+    padding-top: 18px;
+    margin-top: 25px;
+    font-size: 0.85rem;
+    color: #95d5b2;
+}
+
+.tracker-bar {
+    background-color: #08140f;
+    color: #ffffff;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    border-top: 1px solid #1b4332;
+}
+
+.tracker-bar strong {
+    color: #ffd166;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+    .page-header {
+        padding: 28px 0;
+    }
+    .card-custom img {
+        height: 180px;
+    }
+}

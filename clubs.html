@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs &amp; Locations - Alpine Ascents</title>
+    <link rel="icon" href="assets/img/logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <span>Live Date &amp; Time: <span id="liveDateTime"></span></span>
+        </div>
+        <div>
+            <span>Visitors: <span id="visitorCount" class="badge bg-light text-dark">1248</span></span>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.jpg" alt="Logo" width="40" height="40">
+            <span>Alpine Ascents</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Climbing Guides
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="types.html">Types &amp; Styles</a></li>
+                        <li><a class="dropdown-item" href="techniques.html">Techniques</a></li>
+                        <li><a class="dropdown-item" href="camping.html">Camping &amp; Sheltering</a></li>
+                        <li><a class="dropdown-item" href="safety.html">Hazards &amp; Safety</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                        Community &amp; Media
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="history.html">History</a></li>
+                        <li><a class="dropdown-item" href="stories.html">Success Stories</a></li>
+                        <li><a class="dropdown-item active" href="clubs.html">Clubs &amp; Locations</a></li>
+                        <li><a class="dropdown-item" href="gallery.html">Photo Gallery</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Guidelines &amp; Updates
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="developments.html">Developments</a></li>
+                        <li><a class="dropdown-item" href="guidelines.html">Guidelines</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <div class="container">
+        <h1>Alpine Clubs &amp; Mountain Locations</h1>
+        <p>Historic mountaineering organizations and the great mountain ranges of the world</p>
+    </div>
+</div>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-7">
+                <span class="section-subtitle">Global Directory</span>
+                <h2 class="section-title mb-0">Mountaineering Organizations</h2>
+            </div>
+            <div class="col-md-5 mt-3 mt-md-0">
+                <input type="text" id="clubSearchInput" class="form-control" placeholder="Search clubs, cities or countries...">
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table-custom" id="clubsTable">
+                <thead>
+                    <tr>
+                        <th>Club Name</th>
+                        <th>Headquarters</th>
+                        <th>Founded</th>
+                        <th>Primary Focus &amp; Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>The Alpine Club</strong></td>
+                        <td>London, United Kingdom</td>
+                        <td>1857</td>
+                        <td>The world's first mountaineering club; publishes the Alpine Journal.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Club Alpino Italiano (CAI)</strong></td>
+                        <td>Milan, Italy</td>
+                        <td>1863</td>
+                        <td>Maintains hundreds of mountain refuges (rifugi) across the Italian Alps and Dolomites.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Swiss Alpine Club (SAC)</strong></td>
+                        <td>Bern, Switzerland</td>
+                        <td>1863</td>
+                        <td>Operates mountain huts, mountaineering training programs, and search-and-rescue support.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Deutscher Alpenverein (DAV)</strong></td>
+                        <td>Munich, Germany</td>
+                        <td>1869</td>
+                        <td>Largest climbing association in the world; manages climbing centers, huts, and alpine safety research.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>American Alpine Club (AAC)</strong></td>
+                        <td>Golden, Colorado, USA</td>
+                        <td>1902</td>
+                        <td>Supports conservation, climbing grants, library archives, and publishes Accidents in North American Climbing.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>The Himalayan Club</strong></td>
+                        <td>Mumbai, India</td>
+                        <td>1928</td>
+                        <td>Encourages exploration in the Himalaya, Karakoram, and Hindu Kush ranges.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nepal Mountaineering Association (NMA)</strong></td>
+                        <td>Kathmandu, Nepal</td>
+                        <td>1973</td>
+                        <td>National alpine body managing trekking peak permits and mountaineering training for Sherpas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alpine Club of Pakistan (ACP)</strong></td>
+                        <td>Islamabad, Pakistan</td>
+                        <td>1974</td>
+                        <td>National body for mountaineering, rock climbing, and expeditions across the Karakoram, Himalaya, and Hindu Kush.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding bg-light-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-subtitle">Geography</span>
+            <h2 class="section-title">Great Mountain Ranges of the World</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="info-box">
+                    <h4>The Alps</h4>
+                    <p class="text-secondary small mt-2">Spanning France, Switzerland, Italy, and Austria. The historical birthplace of alpine mountaineering, home to Mont Blanc and the Matterhorn.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="info-box">
+                    <h4>The Himalaya</h4>
+                    <p class="text-secondary small mt-2">Home to Mount Everest and the highest concentration of 8,000-meter peaks on Earth, stretching across Nepal, India, Bhutan, and Pakistan.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="info-box">
+                    <h4>The Karakoram</h4>
+                    <p class="text-secondary small mt-2">Located in northern Pakistan, home to K2, Broad Peak, the Gasherbrums, and immense non-polar glaciers including the Baltoro.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="info-box">
+                    <h4>The Andes</h4>
+                    <p class="text-secondary small mt-2">The longest continental mountain range on Earth, stretching along South America's western spine. Summit peak: Aconcagua (6,961 m).</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="info-box">
+                    <h4>Alaska Range</h4>
+                    <p class="text-secondary small mt-2">Rugged, glaciated, and exposed to sub-Arctic weather systems. Dominated by Denali (6,190 m), the highest peak in North America.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="info-box">
+                    <h4>East Africa</h4>
+                    <p class="text-secondary small mt-2">Volcanic summits rising above equatorial plains: Mount Kilimanjaro (5,895 m) and Mount Kenya (5,199 m) with unique high-altitude zones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+            <div>
+                <h4 class="section-title mb-1">Climbing Community</h4>
+                <p class="text-secondary small mb-0">Read inspiring stories and explore expedition photographs.</p>
+            </div>
+            <div class="d-flex gap-2 mt-3 mt-md-0">
+                <a href="stories.html" class="btn-custom-primary">Success Stories</a>
+                <a href="gallery.html" class="btn-custom-outline">Photo Gallery</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-custom">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <h5>Alpine Ascents</h5>
+                <p class="small">An educational field guide to mountaineering covering climbing styles, ropework, glacier travel, safety, alpine history, and mountain ethics.</p>
+                <p class="small text-muted">A student eProject presentation.</p>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5>Climbing Guides</h5>
+                <ul>
+                    <li><a href="types.html">Types &amp; Styles</a></li>
+                    <li><a href="techniques.html">Technical Techniques</a></li>
+                    <li><a href="camping.html">Camping &amp; Sheltering</a></li>
+                    <li><a href="safety.html">Hazards &amp; Safety</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5>Community &amp; Updates</h5>
+                <ul>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="stories.html">Success Stories</a></li>
+                    <li><a href="clubs.html">Clubs &amp; Locations</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="developments.html">Developments</a></li>
+                    <li><a href="guidelines.html">Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+            <div>&copy; 2026 Alpine Ascents - Aptech Student eProject.</div>
+            <div>Built with HTML5, CSS3, JavaScript and Bootstrap 5.</div>
+        </div>
+    </div>
+</footer>
+
+<div class="tracker-bar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <div>
+            <strong>Live Tracker:</strong>
+            <span id="trackerDateTime">Loading date and time...</span>
+        </div>
+        <div>
+            <strong>Location:</strong>
+            <span id="trackerLocation">Detecting location...</span>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
